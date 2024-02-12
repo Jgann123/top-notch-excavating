@@ -41,10 +41,6 @@ export class TnHeaderComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.appTitle = "Top Notch"
   }
-
-  callPhoneNumber(): void {
-    window.location.href = 'tel:(423)307-0802';
-  }
   
 
   ngOnInit(): void {
