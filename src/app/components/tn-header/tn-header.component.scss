@@ -1,0 +1,72 @@
+/* General styles */
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+  
+  .phone-icon {
+    cursor: pointer;
+    margin-right: 16px; /* Adjust as needed */
+  }
+  
+  .phone-number {
+    margin-right: 16px; /* Adjust as needed */
+  }
+  
+  .logo-container {
+    max-width: 200px;
+    flex-grow: 1;
+  }
+  
+  .logo-image {
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+  }
+  
+  /* Mobile styles */
+  .mobile-header {
+    display: none; /* Hide desktop header on mobile */
+  }
+  
+  .logo-container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .logo-image-mobile {
+    width: 60%; /* Adjust the width of the logo as needed for mobile */
+    height: auto;
+    max-height: 50px;
+  }
+  
+  /* Desktop styles */
+  .desktop-header {
+    display: block; /* Show desktop header by default */
+  }
+  
+  /* Sidenav styles */
+  .sidenav-container {
+    display: none; /* Hide sidenav by default */
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-header {
+      display: block; /* Show mobile header on small screens */
+    }
+  
+    .desktop-header {
+      display: none; /* Hide desktop header on small screens */
+    }
+  
+    .sidenav-container {
+      display: block; /* Show sidenav on small screens */
+    }
+  }
+  

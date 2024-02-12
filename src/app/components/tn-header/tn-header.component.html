@@ -1,0 +1,55 @@
+  <!-- Additional Toolbar with Phone Number -->
+  <mat-toolbar >
+    <div class="spacer"></div> <!-- Add a spacer to push content to the left -->
+    <div class="phone-icon" (click)="callPhoneNumber()"><mat-icon>phone</mat-icon></div>
+    <div class="phone-number" >(423) 307-0802</div>
+  </mat-toolbar>
+
+<div class="mobile-header">
+  <mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <a routerLink="/">Home</a>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <a routerLink="/about">About</a>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <a routerLink="contact">Contact</a>
+      </button>
+    </mat-menu>
+    <span class="logo-container-mobile">
+      <img src="assets/TN2.jpeg" alt="Top Notch Logo" class="logo-image-mobile">
+    </span>
+  </mat-toolbar>
+</div>
+
+<div class="desktop-header">
+  <mat-toolbar style="background-color: #ffff;">
+    <div class="logo-container">
+      <img src="assets/TN2.jpeg" alt="Top Notch Logo" class="logo-image">
+    </div>
+    <mat-tab-group (selectedTabChange)="onTabChanged($event)">
+      <mat-tab label="Home" routerLink="/"></mat-tab>
+      <mat-tab label="About" routerLink="/about"></mat-tab>
+      <mat-tab label="Services" [matMenuTriggerFor]="menu">
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/service1">Service 1</button>
+          <button mat-menu-item routerLink="/service2">Service 2</button>
+          <button mat-menu-item routerLink="/service3">Service 3</button>
+        </mat-menu>
+      </mat-tab>
+      <mat-tab label="Contact" routerLink="/contact"></mat-tab>
+    </mat-tab-group>
+  </mat-toolbar>
+</div>
+
+<app-image-header></app-image-header>
+
+
