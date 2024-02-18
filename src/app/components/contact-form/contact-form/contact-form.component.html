@@ -1,0 +1,16 @@
+<form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+    <mat-form-field>
+      <input matInput placeholder="Name" name="name" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Phone Number" name="phoneNumber" ngModel required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" name="email" ngModel required email>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Message" name="message" ngModel required></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+  

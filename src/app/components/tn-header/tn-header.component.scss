@@ -1,72 +1,90 @@
 /* General styles */
 .mat-toolbar {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: #ffffff87;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  background-color: #a8a7a7
+}
+
+.phone-icon {
+  cursor: pointer;
+  margin-right: 16px; /* Adjust as needed */
+}
+
+.phone-number {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none;
+  font-weight: bolder;
+  margin-right: 16px; /* Adjust as needed */
+  color: #ffffff;
+}
+
+/* Mobile styles */
+.mobile-header {
+  display: none; /* Hide desktop header on mobile */
+}
+
+/* Desktop styles */
+.desktop-header {
+  display: block; /* Show desktop header by default */
+}
+
+/* Center tabs */
+.center-tabs .mat-tab-labels {
+  justify-content: center; /* Center tabs horizontally */
+}
+
+.mat-tab-label {
+  font-size: 18px; /* Adjust font size of tabs */
+}
+
+.mat-tab-label-content {
+  padding: 0 20px; /* Adjust padding of tab labels */
+}
+
+// .center-tabs .mat-tab-labels {
+//   justify-content: center; /* Center tabs horizontally */
+// }
+
+// .mat-tab-label {
+//   font-size: 20px; /* Adjust font size of tabs */
+//   min-width: auto; /* Allow tabs to adjust their width based on content */
+// }
+
+// .mat-tab-label-content {
+//   padding: 12px 24px; /* Adjust padding of tab labels */
+// }
+
+button {
+  position: fixed;
+  width: 250px;
+  margin-top: 120px;
+  background-color: #646464;
+  top: 20px; /* Adjust this value to your preference */
+  z-index: 20;
+}
+
+
+
+@media (max-width: 768px) {
+  .mobile-header {
+    display: block; /* Show mobile header on small screens */
   }
 
-  .spacer {
-    flex: 1;
-  }
-  
-  .phone-icon {
-    cursor: pointer;
-    margin-right: 16px; /* Adjust as needed */
-  }
-  
-  .phone-number {
-    margin-right: 16px; /* Adjust as needed */
-  }
-  
-  .logo-container {
-    max-width: 200px;
-    flex-grow: 1;
-  }
-  
-  .logo-image {
-    width: 100%;
-    height: auto;
-    max-height: 50px;
-  }
-  
-  /* Mobile styles */
-  .mobile-header {
-    display: none; /* Hide desktop header on mobile */
-  }
-  
-  .logo-container-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-  }
-  
-  .logo-image-mobile {
-    width: 60%; /* Adjust the width of the logo as needed for mobile */
-    height: auto;
-    max-height: 50px;
-  }
-  
-  /* Desktop styles */
   .desktop-header {
-    display: block; /* Show desktop header by default */
+    display: none; /* Hide desktop header on small screens */
   }
-  
-  /* Sidenav styles */
-  .sidenav-container {
-    display: none; /* Hide sidenav by default */
-  }
-  
-  @media (max-width: 768px) {
-    .mobile-header {
-      display: block; /* Show mobile header on small screens */
-    }
-  
-    .desktop-header {
-      display: none; /* Hide desktop header on small screens */
-    }
-  
-    .sidenav-container {
-      display: block; /* Show sidenav on small screens */
-    }
-  }
-  
+}
+

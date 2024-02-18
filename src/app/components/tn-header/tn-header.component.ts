@@ -12,6 +12,9 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {MatMenuModule} from '@angular/material/menu';
 import { HeaderComponent } from '../image-sub-header/header/header.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
+import { ContactFormComponent } from '../contact-form/contact-form/contact-form.component';
 
 
 @Component({
@@ -23,6 +26,8 @@ import { HeaderComponent } from '../image-sub-header/header/header.component';
     RouterLink,
     MatIconModule,
     MatMenuModule,
+    MatButtonModule, 
+    MatIconModule,
     MatSidenavModule,
     MatListModule,
     RouterModule, 
@@ -38,7 +43,7 @@ export class TnHeaderComponent implements OnInit {
   isMenuOpen: boolean = false;
   public appTitle: string;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, public dialog: MatDialog) {
     this.appTitle = "Top Notch"
   }
   
@@ -79,6 +84,18 @@ export class TnHeaderComponent implements OnInit {
       default:
         break;
     }
+  }
+
+  openContactForm(): void {
+    this.dialog.open(ContactFormComponent, {
+      width: '400px', // Set the width according to your preference
+      // Other dialog options can be configured here
+    });
+  }
+
+  openCallDialog(): void {
+    // Implement functionality to call
+    console.log('Calling now...');
   }
 
   closeSidenav(): void {

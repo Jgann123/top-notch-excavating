@@ -1,4 +1,10 @@
-
+<div class="header">
+  <button mat-fab extended color="primary" (click)="openContactForm()">
+    <mat-icon>phone</mat-icon>
+    <mat-icon>mail</mat-icon>
+    Contact Us Today
+  </button>
+</div>
 
 <div class="mobile-header">
   <mat-toolbar>
@@ -19,19 +25,13 @@
         <a routerLink="contact">Contact</a>
       </button>
     </mat-menu>
-    <span class="logo-container-mobile">
-      <img src="assets/TN2.jpeg" alt="Top Notch Logo" class="logo-image-mobile">
-    </span>
   </mat-toolbar>
 </div>
 
 <div class="desktop-header">
   <mat-toolbar style="background-color: #ffff;">
-    <div class="logo-container">
-      <img src="assets/TN2.jpeg" alt="Top Notch Logo" class="logo-image">
-    </div>
-    <mat-tab-group (selectedTabChange)="onTabChanged($event)">
-      <mat-tab label="Home" routerLink="/"></mat-tab>
+    <mat-tab-group (selectedTabChange)="onTabChanged($event)" class="center-tabs">
+      <mat-tab label="Home" routerLink="/" color="info"></mat-tab>
       <mat-tab label="About" routerLink="/about"></mat-tab>
       <mat-tab label="Services" [matMenuTriggerFor]="menu">
         <mat-menu #menu="matMenu">
@@ -44,7 +44,3 @@
     </mat-tab-group>
   </mat-toolbar>
 </div>
-
-<app-image-header></app-image-header>
-
-
