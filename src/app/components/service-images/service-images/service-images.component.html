@@ -1,0 +1,12 @@
+<div class="services-container">
+
+<h1>Our Services</h1>
+
+<div class="box-row" style="margin-top: 50px;">
+    <div class="box" *ngFor="let box of boxes" (mouseenter)="expandBox(box)" (mouseleave)="shrinkBox(box)">
+      <div class="overlay"></div>
+      <img [src]="box.imageUrl" alt="Background Image">
+      <div class="title">{{ box.title }}</div>
+    </div>
+  </div>
+</div>

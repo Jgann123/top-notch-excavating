@@ -3,6 +3,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ContactFormService } from '../../../services/contact-form.service';
+
 
 @Component({
   selector: 'app-contact-form',

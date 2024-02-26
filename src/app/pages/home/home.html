@@ -1,10 +1,16 @@
 <app-image-header></app-image-header>
-<div class="container">
+
+<div class="home-container">
     <div class="horizontal-line"></div>
-    <app-content-text-section [headerContent]="header" [textContent]="content"></app-content-text-section>
-    <!-- <div class="horizontal-line"></div> -->
+    <app-content-text-section [headerContent]="header" [textContent]="content" style="display: flex; justify-content: center;">
+        <!-- Insert dynamic content here -->
+        <!-- <app-rating-animation></app-rating-animation> -->
+      
     <div class="image-content-section-container">
-    <app-content-text-image-section [headerContent]="header" [textContent]="content"></app-content-text-image-section>
+
+
+<div class="services-container">
+<app-content-text-section [headerContent]="Services"></app-content-text-section>
 </div>
 
-</div>
+    

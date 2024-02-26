@@ -1,4 +1,22 @@
+
 <div class="container">
-    <h1 class="header">{{ headerContent }}</h1>
-    <p class="content">{{ textContent }}</p>
+    <div class="sub-container">
+        <div class="review-section">
+        <div class="review-component">
+            <!-- Insert the review component here -->
+            <app-ratings-section></app-ratings-section>
+        </div>
+        <div class="text-content">
+            <h1 class="header">{{ headerContent }}</h1>
+            <p class="content">{{ textContent }}</p>
+            <button mat-raised-button color="info">Learn More</button>
+        </div>
+    </div>
+    </div>
 </div>
+<div class="excellence">
+<app-content-text-image-section [headerContent]="header"></app-content-text-image-section>
+<h1>"Excellent Service"</h1>
+</div>
+
+

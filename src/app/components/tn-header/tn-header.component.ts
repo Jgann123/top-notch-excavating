@@ -11,6 +11,7 @@ import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {MatMenuModule} from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from '../image-sub-header/header/header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
@@ -23,6 +24,7 @@ import { ContactFormComponent } from '../contact-form/contact-form/contact-form.
   imports: [
     MatToolbarModule,
     CommonModule,
+    MatDialogModule,
     RouterLink,
     MatIconModule,
     MatMenuModule,
@@ -58,7 +60,6 @@ export class TnHeaderComponent implements OnInit {
   }
 
   toggleSidenav(): void {
-    console.log("blaj")
     this.isMenuOpen = !this.isMenuOpen;
   }
 

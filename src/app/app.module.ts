@@ -14,18 +14,13 @@ import { AppComponent } from './app.component';
 import { HomePage } from './pages/home/home';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-
+import { LottieAnimationViewModule } from 'ng-lottie';
 const routes: Routes = [
   // Define your routes here
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ContentCardListComponent,
-    ContentCardComponent,
-    TnHeaderComponent,
-    HomePage
   ],
   imports: [
     BrowserModule,
@@ -34,12 +29,13 @@ const routes: Routes = [
     MatButtonModule,
     MatCardModule,
     MatIconModule,
+    LottieAnimationViewModule.forRoot(),
     MatListModule,
     MatSidenavModule,
     MatTabsModule,
     MatToolbarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

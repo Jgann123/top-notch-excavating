@@ -30,8 +30,8 @@
 
 <div class="desktop-header">
   <mat-toolbar style="background-color: #ffff;">
-    <mat-tab-group (selectedTabChange)="onTabChanged($event)" class="center-tabs">
-      <mat-tab label="Home" routerLink="/" color="info"></mat-tab>
+    <mat-tab-group (selectedTabChange)="onTabChanged($event)" class="center-tabs custom-tab-group">
+      <mat-tab label="Home" routerLink="/"></mat-tab>
       <mat-tab label="About" routerLink="/about"></mat-tab>
       <mat-tab label="Services" [matMenuTriggerFor]="menu">
         <mat-menu #menu="matMenu">
@@ -44,3 +44,4 @@
     </mat-tab-group>
   </mat-toolbar>
 </div>
+

@@ -1,19 +1,32 @@
-.container {
+.home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
+    height: auto; /* Change height to auto */
 }
 
 .horizontal-line {
     width: 85%;
     height: 2px;
     background-color: rgba(180, 178, 178, 0.601);
-    margin: 50px;
+    margin: 50px 0; /* Adjust margin */
 }
 
 .image-content-section-container {
-    width: 65%;
+    display: flex; /* Use flexbox for image-content-section-container */
+    justify-content: space-between; /* Space components evenly */
+    width: 85%; /* Adjust width */
 }
-/* Adjust styles for app-image-header and app-content-text-section as needed */
+
+.content-square {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.services-container {
+    width: 100%; /* Adjust width */
+    padding: 20px 0; /* Add padding */
+}
+
